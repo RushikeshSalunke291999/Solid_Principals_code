@@ -8,7 +8,7 @@ import java.util.List;
 this code reefers one of the solid principal
 LSP (Liskov Substitution principal)
 - LSP states that objects of a superclass should be replaceable with objects of its subclass
-without altering the correctness, behavior, or expected properties of the program
+without altering the correctness, behavior, or expected properties of  the program
 */
 
 public class Main {
