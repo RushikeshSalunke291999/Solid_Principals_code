@@ -54,5 +54,55 @@ public class Main {
                 )).builder();
 
         System.out.println(p.toString());
+
+        Product p2 = Product.getBuilder()
+                .setId(2002L)
+                .setName("Noise-Cancelling Headphones Z3")
+                .setDescription("Over-ear wireless headphones with hybrid ANC and 40-hour battery life.")
+                .setBrand("SonicWave")
+                .setCategory("Audio")
+                .setStock_Kepping_it("SKU-Z3-BLK")
+                .setPrice(12999.0)
+                .setDiscount(0.15) // 15%
+                .setTax(0.18)      // 18%
+                .setFinalPrice(12999.0 * (1 - 0.15) * (1 + 0.18))
+                .setCurrency("INR")
+                .setQuantityAvailable(80)
+                .setAvailable(true)
+                .setWarehouseLocation("Delhi-02")
+                .setReorderLevel(15)
+                .setImages(Arrays.asList(
+                        "https://cdn.example.com/products/z3/img1.jpg",
+                        "https://cdn.example.com/products/z3/img2.jpg"
+                ))
+                .setThumbnail("https://cdn.example.com/products/z3/thumb.jpg")
+                .setVideoUrl("https://youtu.be/demo-z3")
+                .setColorOptions(Arrays.asList("Black", "Silver"))
+                .setSizeOptions(Arrays.asList("Standard"))
+                .setRating(4.7)
+                .setReviewCount(542)
+                .setTags(Arrays.asList("headphones", "wireless", "anc"))
+                .setCreatedAt(LocalDateTime.now().minusDays(7))
+                .setUpdatedAt(LocalDateTime.now())
+                .setAddedBy("Admin")
+                .setWeight(0.275) // kg
+                .setDimensions("18.0x15.0x7.5 cm")
+                .setShippingCost(99.0)
+                .setDeliveryTime("3-5 business days")
+                .setReturnable(true)
+                .setModelNumber("Z3-ANC-2025")
+                .setWarrantyPeriod("24 months")
+                .setPowerConsumption("USB-C 10W")
+                .setMaterial("Aluminum, Plastic, Memory Foam")
+                .setCustomAttributes(Map.of(
+                        "Drivers", "40mm",
+                        "Bluetooth", "5.3",
+                        "Battery", "40h",
+                        "NoiseCancellation", "Hybrid ANC",
+                        "Codec", "AAC, SBC"
+                ))
+                .builder();
+
+        System.out.println(p2.toString());
     }
 }
